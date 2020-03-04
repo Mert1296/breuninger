@@ -70,4 +70,4 @@ COPY docker-entrypoint.sh /usr/local/bin/
 ENTRYPOINT ["docker-entrypoint.sh"]
 
 RUN git clone https://github.com/Mert1296/breuninger usr/breuninger
-CMD [ "node app" ]
+CMD [ "node", "app" ]
