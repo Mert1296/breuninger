@@ -1,6 +1,4 @@
 FROM buildpack-deps:stretch
 
-RUN mkdir /breuninger
-COPY .
-
+RUN git clone https://github.com/Mert1296/breuninger /breuninger
 CMD [ "node app" ]
