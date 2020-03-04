@@ -1,5 +1,6 @@
 FROM buildpack-deps:stretch
 
-COPY app.js .
+RUN mkdir /breuninger
+COPY .
 
 CMD [ "node app" ]
