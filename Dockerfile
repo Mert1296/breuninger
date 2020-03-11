@@ -72,7 +72,7 @@ ENTRYPOINT ["docker-entrypoint.sh"]
 RUN cd usr \
     && mkdir breuninger  \
     && cd usr/breuninger \
-    && git clone https://github.com/Mert1296/breuninger
+    && git clone https://github.com/Mert1296/breuninger usr/breuninger
 RUN npm install
 CMD node app.js
 EXPOSE 8081
