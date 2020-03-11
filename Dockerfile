@@ -69,5 +69,9 @@ RUN set -ex \
 COPY docker-entrypoint.sh /usr/local/bin/
 ENTRYPOINT ["docker-entrypoint.sh"]
 
-RUN git clone https://github.com/Mert1296/breuninger usr/breuninger
-CMD [ "node", "app" ]
+RUN cd usr \
+    && mkdir breuninger  \
+    && git clone https://github.com/Mert1296/breuninger usr/breuninger
+RUN npm install
+CMD node app.js
+EXPOSE 8081
